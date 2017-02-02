@@ -1,0 +1,134 @@
+.projects-box
+  background-color: $white-color
+  min-height: 120vh
+  color: $gray-color
+
+  .projects-header
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    min-height: 40vh
+
+    span
+      color: $main-color
+      font-weight: 700
+
+  .projects-gallery
+    display: flex
+    flex-wrap: wrap
+    min-height: 40vh
+    
+    .project
+      position: relative
+      box-sizing: border-box
+      border: 0.1px solid $light-gray
+      display: flex
+      justify-content: center
+      align-items: center  
+      width: 25%
+
+      .mask
+        position: absolute
+        padding: 10px
+        bottom: 0
+        right: 0
+        left: 0
+        opacity: 0
+        min-height: 100px
+        background-color: $gray-color
+        color: $white-color
+        transition: 0.5s all ease-in-out
+          
+        p
+          text-align: justify
+
+          span
+            font-weight: 700
+            letter-spacing: 1.5px
+
+            &.js
+              color: #f0db4f
+            &.html
+              color: #f1642c
+            &.css
+              color: #2ba8e0
+            &.jquery
+              color: #78cff5
+            &.bootstrap
+              color: #5a4181
+            &.node
+              color: #90c53f
+            &.sass
+              color: #cc6699
+            &.bower
+              color: #ef5636
+            &.angular
+              color: #e23237
+            &.underscore
+              color: #0071b5
+            &.npm
+              color: #cb3837
+            &.gulp
+              color: #CF4646
+
+      &:hover
+        cursor: pointer
+
+        .mask
+          opacity: 1
+          cursor: pointer
+
+  .projects-others
+    min-height: 40vh
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    h2
+      text-align: center
+
+    ul
+      box-sizing: border-box
+      width: 300px
+
+      li
+        margin: 5px 0
+        padding-left: 0
+        a
+          color: $gray-color
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+
+        span
+          color: $main-color
+
+@media (max-width: 840px)
+  .projects-box
+    .projects-header
+      text-align: center
+
+      p
+        padding: 0 10px
+
+    .projects-gallery
+      .project
+        width: 50%
+        min-height: 200px
+
+        .mask
+          top: 40%
+          top: 0
+          opacity: 1
+
+          h3
+            text-align: center
+
+@media (max-width: 480px)
+  .projects-box
+    .projects-gallery
+      .project
+        width: 100%

@@ -1,0 +1,40 @@
+.stats-box
+  background-color: $gray-color
+  min-height: 45vh
+  display: flex
+  flex-wrap: wrap
+
+  .single-stat
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    width: 25%
+    color: $white-color
+
+    .fa
+      margin: 0
+      text-align: center
+      font-weight: 400
+      font-size: 56px
+
+    .number
+      margin: 0
+      text-align: center
+      font-weight: 600
+      font-size: 42px
+      margin: 15px 0
+
+    .text-muted
+      color: $light-gray
+
+@media (max-width: 1020px)
+  .stats-box
+    min-height: 50vh
+    .single-stat
+      font-size: 13px
+      text-align: center
+      width: 50%
+
+      .number
+        font-size: 35px

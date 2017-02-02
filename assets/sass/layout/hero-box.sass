@@ -1,0 +1,60 @@
+.hero-box
+  color: $gray-color
+  background-color: $white-color
+
+  .hero-header
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    flex-direction: column
+    min-height: 20vh
+
+    p
+      span
+        color: $main-color
+
+  .hero-articles
+    display: flex
+    display: -ms-flexbox
+    display: -webkit-flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    min-height: 70vh
+
+    .hero-ul
+      margin: 2px 0
+      box-sizing: border-box
+      width: 350px
+      padding: 5px
+
+      .hero-atr
+        text-align: center
+        list-style: none
+        opacity: 0
+        transition: 300ms all ease-in-out
+
+        i
+          text-shadow: 1px -1px 1px rgba(150, 150, 150, 1)
+          color: $main-color
+
+        &.is-showing
+          opacity: 1
+
+        p
+          padding-bottom: 12px
+
+        .fa
+          font-size: 35px
+
+@media (max-width: 1020px)
+  .hero-box
+    .hero-header
+      margin-bottom: 30px
+
+      p
+        padding: 0 10px
+    .hero-articles
+
+      .hero-ul
+        width: 100%

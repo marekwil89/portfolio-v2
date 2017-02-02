@@ -1,0 +1,93 @@
+nav
+  position: fixed
+  width: 100%
+  background: rgba($black-color, 0.9)
+  border-bottom: 1px solid $white-color
+  z-index: 999
+  color: $white-color
+  box-shadow: 0px 9px 6px -3px rgba($black-color, 0.75)
+
+  .fa-bars
+    display: none
+    line-height: 80px
+    float: right
+    cursor: pointer
+    margin: 0 20px 0 0
+
+  .logo
+    margin:  0 0 0 20px
+    display: inline-block
+    line-height: 80px
+    font-size: 31px
+    color: $white-color
+    text-transform: uppercase
+    letter-spacing: 2.3px
+
+    span
+      color: $main-color
+
+  .menu
+    margin: 0 20px 0 0
+    float: right
+    line-height: 50px
+    display: block
+    list-style: none
+    transition: 0.3s all
+
+    li
+      display: inline-block
+      font-weight: 700
+      
+      a
+        display: block
+        padding: 14px
+        font-size: 15px
+        letter-spacing: 2px
+        text-decoration: none
+        color: $white-color
+        transition: 0.3s all
+
+        &:hover
+          color: $main-color
+
+        &.active
+          color: $main-color
+      
+        i
+          font-size: 24px
+          color: $white-color
+          transition: 0.3s all
+
+          &:hover
+            color: $main-color
+
+@media (max-width: 700px)
+  nav
+    .logo
+      font-size: 20px
+      line-height: 60px
+    
+    .fa-bars
+      display: inline-block
+      line-height: 60px
+
+    .menu
+      background: rgba($black-color, 0.95)
+      margin: 0
+      position: fixed
+      top: 1000px
+      bottom: -1000px
+      left: 0
+      right: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      
+      &.is-opened
+        top: 60px
+        bottom: 0
+
+      li
+        display: block
+        font-size: 23px
