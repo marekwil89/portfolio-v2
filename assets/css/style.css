@@ -154,7 +154,7 @@
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    min-height: 40vh; }
+    min-height: 80vh; }
     .projects-box .projects-gallery .project {
       position: relative;
       box-sizing: border-box;
@@ -172,52 +172,54 @@
           -ms-flex-align: center;
               align-items: center;
       width: 25%; }
-      .projects-box .projects-gallery .project .mask {
-        position: absolute;
-        padding: 10px;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        opacity: 0;
-        min-height: 100px;
-        background-color: #333333;
-        color: #EEEEEE;
-        -webkit-transition: 0.5s all ease-in-out;
-                transition: 0.5s all ease-in-out; }
-        .projects-box .projects-gallery .project .mask p {
-          text-align: justify; }
-          .projects-box .projects-gallery .project .mask p span {
-            font-weight: 700;
-            letter-spacing: 1.5px; }
-            .projects-box .projects-gallery .project .mask p span.js {
-              color: #f0db4f; }
-            .projects-box .projects-gallery .project .mask p span.html {
-              color: #f1642c; }
-            .projects-box .projects-gallery .project .mask p span.css {
-              color: #2ba8e0; }
-            .projects-box .projects-gallery .project .mask p span.jquery {
-              color: #78cff5; }
-            .projects-box .projects-gallery .project .mask p span.bootstrap {
-              color: #5a4181; }
-            .projects-box .projects-gallery .project .mask p span.node {
-              color: #90c53f; }
-            .projects-box .projects-gallery .project .mask p span.sass {
-              color: #cc6699; }
-            .projects-box .projects-gallery .project .mask p span.bower {
-              color: #ef5636; }
-            .projects-box .projects-gallery .project .mask p span.angular {
-              color: #e23237; }
-            .projects-box .projects-gallery .project .mask p span.underscore {
-              color: #0071b5; }
-            .projects-box .projects-gallery .project .mask p span.npm {
-              color: #cb3837; }
-            .projects-box .projects-gallery .project .mask p span.gulp {
-              color: #CF4646; }
       .projects-box .projects-gallery .project:hover {
-        cursor: pointer; }
+        z-index: 10; }
         .projects-box .projects-gallery .project:hover .mask {
           opacity: 1;
-          cursor: pointer; }
+          overflow: hidden; }
+          .projects-box .projects-gallery .project:hover .mask h3, .projects-box .projects-gallery .project:hover .mask p {
+            -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0); }
+      .projects-box .projects-gallery .project .mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: 0.3s all;
+                transition: 0.3s all;
+        background: rgba(255, 51, 51, 0.9);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .projects-box .projects-gallery .project .mask h3 {
+          color: #EEEEEE;
+          -webkit-transform: translate3d(0, -700%, 0);
+                  transform: translate3d(0, -700%, 0);
+          -webkit-transition: 0.5s all;
+                  transition: 0.5s all;
+          margin-bottom: 20px; }
+        .projects-box .projects-gallery .project .mask p {
+          color: #EEEEEE;
+          -webkit-transition: 0.5s all;
+                  transition: 0.5s all;
+          -webkit-transform: translate3d(0, 700%, 0);
+                  transform: translate3d(0, 700%, 0); }
   .projects-box .projects-others {
     min-height: 40vh;
     display: -webkit-box;
@@ -262,11 +264,11 @@
     width: 50%;
     min-height: 200px; }
     .projects-box .projects-gallery .project .mask {
-      top: 40%;
-      top: 0;
-      opacity: 1; }
-      .projects-box .projects-gallery .project .mask h3 {
-        text-align: center; } }
+      opacity: 1;
+      background: rgba(153, 0, 0, 0.9); }
+      .projects-box .projects-gallery .project .mask h3, .projects-box .projects-gallery .project .mask p {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); } }
 @media (max-width: 480px) {
   .projects-box .projects-gallery .project {
     width: 100%; } }
@@ -395,7 +397,7 @@ nav {
           nav .menu li a i:hover {
             color: #ff3333; }
 
-@media (max-width: 700px) {
+@media (max-width: 830px) {
   nav .logo {
     font-size: 20px;
     line-height: 60px; }
@@ -573,9 +575,9 @@ nav {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-fill-mode: both;
   -webkit-animation-name: pulse;
           animation-name: pulse; }
 
@@ -758,6 +760,26 @@ h1, h2, h3 {
 
 .image4 {
   background-image: url("../img/image4.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.image5 {
+  background-image: url("../img/image5.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.image6 {
+  background-image: url("../img/image6.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.image7 {
+  background-image: url("../img/image7.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.image8 {
+  background-image: url("../img/image8.jpg");
   background-size: cover;
   background-position: center; }
 

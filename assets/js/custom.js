@@ -21,9 +21,10 @@ $(document).ready(function(){
     if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname){
 
       var target=$(this.hash);
-
+      if(this.hash != '#about'){
+        $(".menu").toggleClass('is-opened');
+      }
       target = target.length ? target:$('[name='+this.hash.slice(1)+']');
-      $(".menu").toggleClass('is-opened');
       if(target.length){$('html, body').animate({
         scrollTop:target.offset().top
       },1000);

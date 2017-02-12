@@ -17,7 +17,7 @@
   .projects-gallery
     display: flex
     flex-wrap: wrap
-    min-height: 40vh
+    min-height: 80vh
     
     .project
       position: relative
@@ -28,56 +28,39 @@
       align-items: center  
       width: 25%
 
-      .mask
-        position: absolute
-        padding: 10px
-        bottom: 0
-        right: 0
-        left: 0
-        opacity: 0
-        min-height: 100px
-        background-color: $gray-color
-        color: $white-color
-        transition: 0.5s all ease-in-out
-          
-        p
-          text-align: justify
-
-          span
-            font-weight: 700
-            letter-spacing: 1.5px
-
-            &.js
-              color: #f0db4f
-            &.html
-              color: #f1642c
-            &.css
-              color: #2ba8e0
-            &.jquery
-              color: #78cff5
-            &.bootstrap
-              color: #5a4181
-            &.node
-              color: #90c53f
-            &.sass
-              color: #cc6699
-            &.bower
-              color: #ef5636
-            &.angular
-              color: #e23237
-            &.underscore
-              color: #0071b5
-            &.npm
-              color: #cb3837
-            &.gulp
-              color: #CF4646
-
       &:hover
-        cursor: pointer
-
+        z-index: 10
         .mask
           opacity: 1
-          cursor: pointer
+          overflow: hidden
+
+          h3, p
+            transform: translate3d(0, 0, 0)
+
+      .mask
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        opacity: 0
+        transition: 0.3s all
+        background: rgba($main-color, 0.9)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        h3
+          color: $white-color
+          transform: translate3d(0, -700%, 0)
+          transition: 0.5s all
+          margin-bottom: 20px
+
+        p
+          color: $white-color
+          transition: 0.5s all
+          transform: translate3d(0, 700%, 0)
 
   .projects-others
     min-height: 40vh
@@ -120,12 +103,11 @@
         min-height: 200px
 
         .mask
-          top: 40%
-          top: 0
           opacity: 1
+          background: rgba(darken($main-color, 30%), 0.9)
 
-          h3
-            text-align: center
+          h3, p
+            transform: translate3d(0, 0, 0)
 
 @media (max-width: 480px)
   .projects-box
