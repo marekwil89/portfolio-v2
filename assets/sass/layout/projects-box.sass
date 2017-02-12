@@ -50,17 +50,18 @@
         justify-content: center
         align-items: center
         flex-direction: column
+        overflow: hidden
 
         h3
           color: $white-color
-          transform: translate3d(0, -700%, 0)
+          transform: translate3d(-700%, 0, 0)
           transition: 0.5s all
           margin-bottom: 20px
 
         p
           color: $white-color
           transition: 0.5s all
-          transform: translate3d(0, 700%, 0)
+          transform: translate3d(700%, 0, 0)
 
   .projects-others
     min-height: 40vh
@@ -78,7 +79,9 @@
 
       li
         margin: 5px 0
-        padding-left: 0
+        list-style-type: none
+        padding-left: 20px
+
         a
           color: $gray-color
           text-decoration: none

@@ -2,10 +2,10 @@ $(document).ready(function(){
 
   "use strict";
 
-  function openNav(){
-    $(".fa-bars").click(function(){
-      $(".menu").toggleClass('is-opened');
-    })
+  $('.fa-bars').on('click', toggleNav)
+
+  function toggleNav(){
+    $(".menu").toggleClass('is-opened');
   }
 
   function movePng(img, speed){
@@ -20,15 +20,13 @@ $(document).ready(function(){
     $('a[href*="#"]:not([href="#"])').click(function(){
     if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname){
 
-      var target=$(this.hash);
-      if(this.hash != '#about'){
-        $(".menu").toggleClass('is-opened');
-      }
+      var target = $(this.hash);
+      
       target = target.length ? target:$('[name='+this.hash.slice(1)+']');
       if(target.length){$('html, body').animate({
-        scrollTop:target.offset().top
+        scrollTop:target.offset().top - 50
       },1000);
-
+        toggleNav()
         return false;
       }}
     });
@@ -36,7 +34,6 @@ $(document).ready(function(){
 
   movePng('.cloud', 50);
   movePng('.twinkling', 20)
-  openNav();
   anchorScroll();
 
 });
