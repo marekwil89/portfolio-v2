@@ -23,7 +23,7 @@
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0); }
     .header-box .arrow-bottom i {
-      color: #ff3333;
+      color: #EEEEEE;
       font-size: 60px;
       overflow: hidden;
       -webkit-animation: bounce 1s infinite;
