@@ -1,19 +1,7 @@
 $(document).ready(function(){
 
-  "use strict";
-
-  $('.fa-bars').on('click', toggleNav)
-
   function toggleNav(){
     $(".menu").toggleClass('is-opened');
-  }
-
-  function movePng(img, speed){
-    var i = 0
-    setInterval(function(){
-        i++
-        $(img).css('background-position', i + 'px 0')
-    }, speed)
   }
 
   function anchorScroll(){
@@ -35,8 +23,9 @@ $(document).ready(function(){
     });
   }
 
-  movePng('.cloud', 50);
-  movePng('.twinkling', 20)
-  anchorScroll();
 
+
+  $('.fa-bars').on('click', toggleNav)
+
+  anchorScroll();
 });

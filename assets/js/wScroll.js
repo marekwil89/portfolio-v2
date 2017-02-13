@@ -20,7 +20,16 @@ $(document).ready(function(){
     }
   }
 
-  function showHeroAtributs(wScroll){
+  function resizeNav(wScroll){
+    if(wScroll > 0){
+      $('nav').addClass('transparent')
+    }
+    else{
+      $('nav').removeClass('transparent')
+    }
+  }
+
+  function showHeroAtributs(){
       $('.hover-me').addClass('pulse')
       $('.hero-atr').each(function(i){
         setTimeout(function(){
@@ -31,6 +40,8 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
+    
+    resizeNav(wScroll)
 
     if(wScroll > $('.hero-box').offset().top - ($(window).height()/1.9)){
       showHeroAtributs();
