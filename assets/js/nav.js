@@ -23,8 +23,6 @@ $(document).ready(function(){
     });
   }
 
-
-
   $('.fa-bars').on('click', toggleNav)
 
   anchorScroll();

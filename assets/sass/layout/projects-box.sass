@@ -1,18 +1,7 @@
 .projects-box
-  background-color: $white-color
   min-height: 120vh
+  margin: 100px 0 0
   color: $gray-color
-
-  .projects-header
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    min-height: 40vh
-
-    span
-      color: $main-color
-      font-weight: 700
 
   .projects-gallery
     display: flex
@@ -22,7 +11,7 @@
     .project
       position: relative
       box-sizing: border-box
-      border: 0.1px solid $light-gray
+      border: 0.1px solid $white-color
       display: flex
       justify-content: center
       align-items: center  
@@ -51,6 +40,7 @@
         align-items: center
         flex-direction: column
         overflow: hidden
+        text-align: center
 
         h3
           color: $white-color
@@ -69,6 +59,7 @@
     justify-content: center
     align-items: center
     flex-direction: column
+    padding: 40px 0
 
     h2
       text-align: center
@@ -107,7 +98,7 @@
 
         .mask
           opacity: 1
-          background: rgba(darken($main-color, 30%), 0.9)
+          background: rgba($violet-color, 0.9)
 
           h3, p
             transform: translate3d(0, 0, 0)

@@ -27,51 +27,7 @@
         background-repeat: repeat-x
         background-image: url('../img/cloud2.png')
         
-.flip-box
-    width: 300px
-    height: 385px
-    position: relative
-
-    &:hover .flipper, &.hover .flipper
-        transform: rotateY(180deg)
-        width: 300px
-        height: 385px
-        cursor: pointer
-
-.flipper
-    transition: 0.6s
-    transform-style: preserve-3d
-
-.front, .back
-    border-radius: 50%
-    backface-visibility: hidden
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-
-    .hover-me
-        border-radius: 10px
-        position: absolute
-        top: 0px
-        right: 0px
-        background-color: $medium-gray
-        color: $white-color
-        z-index: 7
-        padding: 9px
-
-    img
-        width: 300px
-        height: 385px
-        border-radius: 50%
-
-.front
-    z-index: 5
-    transform: rotateY(0deg)
-
-.back
-    transform: rotateY(180deg)    
+ 
 
 .image1
     background-image: url('../img/image1.jpg')

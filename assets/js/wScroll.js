@@ -7,25 +7,25 @@ $(document).ready(function(){
       if(add){
         plus = add;
       }
-      var finish = $(element).attr('finish');
-      var start = $(element).attr('start');
-      var speed = $(element).attr('speed');
+      var finish = parseInt($(element).attr('finish'));
+      var start = parseInt($(element).attr('start'));
+      var speed = parseInt($(element).attr('speed'));
       var count = setInterval(function(){
-        start++;
-        if(start == finish){
-          clearInterval(count);
-        }
-        $(element).html(start + plus);
+      start+=2
+      if(start >= finish){
+        clearInterval(count);
+      }
+      $(element).html(start + plus);
       }, speed);
     }
   }
 
   function resizeNav(wScroll){
     if(wScroll > 0){
-      $('nav').addClass('transparent')
+      $('nav').addClass('bg-moved')
     }
     else{
-      $('nav').removeClass('transparent')
+      $('nav').removeClass('bg-moved')
     }
   }
 

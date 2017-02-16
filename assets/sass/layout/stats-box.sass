@@ -1,8 +1,8 @@
 .stats-box
-  background-color: $gray-color
-  min-height: 45vh
+  min-height: 40vh
   display: flex
   flex-wrap: wrap
+  margin: 100px 0
 
   .single-stat
     display: flex
@@ -11,6 +11,18 @@
     flex-direction: column
     width: 25%
     color: $white-color
+
+    &.stat1-bg
+      background-color: $main-color
+
+    &.stat2-bg
+      background-color: $pink-color
+
+    &.stat3-bg
+      background-color: $violet-color
+
+    &.stat4-bg
+      background-color: $blue-color
 
     .fa
       margin: 0
@@ -25,16 +37,22 @@
       font-size: 42px
       margin: 15px 0
 
-    .text-muted
-      color: $light-gray
+    p
+      font-weight: 700
 
 @media (max-width: 1020px)
   .stats-box
-    min-height: 50vh
     .single-stat
       font-size: 13px
       text-align: center
       width: 50%
+      padding: 10px 0
 
       .number
         font-size: 35px
+
+@media (max-width: 450px)
+  .stats-box
+    .single-stat
+      padding: 30px 0
+      width: 100%
