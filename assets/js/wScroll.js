@@ -22,10 +22,10 @@ $(document).ready(function(){
 
   function resizeNav(wScroll){
     if(wScroll > 0){
-      $('nav').addClass('bg-moved')
+      $('nav').addClass('nav-moved')
     }
     else{
-      $('nav').removeClass('bg-moved')
+      $('nav').removeClass('nav-moved')
     }
   }
 

@@ -322,9 +322,9 @@ nav {
   background: rgba(0, 0, 0, 0.1);
   z-index: 999;
   color: #EEEEEE;
-  -webkit-transition: 0.3s all;
-          transition: 0.3s all; }
-  nav.bg-moved {
+  -webkit-transition: 0.5s all;
+          transition: 0.5s all; }
+  nav.nav-moved {
     background: #324b5a;
     border-bottom: 1px solid #EEEEEE; }
   nav .fa-bars {
@@ -434,7 +434,8 @@ nav {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     nav .menu li {
-      margin: 10px; } }
+      margin: 10px;
+      padding: 10px; } }
 .footer-box {
   display: -webkit-box;
   display: -webkit-flex;
